@@ -5,129 +5,380 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Himaja Arabati | Portfolio</title>
   <style>
+    *, *::before, *::after { box-sizing: border-box; }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #0f172a;
       color: #e2e8f0;
+      line-height: 1.7;
     }
 
     header {
       text-align: center;
-      padding: 60px 20px;
+      padding: 70px 20px 50px;
       background: linear-gradient(135deg, #1e293b, #0f172a);
     }
 
     header h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
+      font-size: 42px;
+      margin: 0 0 10px;
+      color: #f1f5f9;
     }
 
-    header p {
-      font-size: 18px;
+    header .subtitle {
+      font-size: 17px;
       color: #94a3b8;
+      margin: 4px 0;
     }
+
+    .header-links {
+      margin-top: 16px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .header-links a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .header-links a:hover { text-decoration: underline; }
 
     section {
-      max-width: 900px;
+      max-width: 920px;
       margin: auto;
-      padding: 30px 20px;
+      padding: 20px 20px 10px;
     }
 
     .card {
       background: #1e293b;
-      padding: 20px;
-      margin: 15px 0;
-      border-radius: 12px;
+      padding: 24px 28px;
+      margin: 18px 0;
+      border-radius: 14px;
     }
 
     h2 {
       border-left: 4px solid #38bdf8;
-      padding-left: 10px;
+      padding-left: 12px;
+      margin-top: 0;
+      font-size: 20px;
+      color: #f1f5f9;
     }
 
     .tag {
       display: inline-block;
       background: #334155;
-      padding: 5px 10px;
-      margin: 5px;
+      padding: 5px 11px;
+      margin: 4px 3px;
       border-radius: 8px;
       font-size: 12px;
+      color: #cbd5e1;
     }
 
-    a {
-      color: #38bdf8;
+    .tag-group { margin-bottom: 10px; }
+
+    .tag-group-label {
+      font-size: 12px;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
     }
+
+    .exp-item { margin-bottom: 26px; }
+    .exp-item:last-child { margin-bottom: 0; }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .exp-title { font-size: 16px; font-weight: bold; color: #f1f5f9; }
+    .exp-company { color: #38bdf8; }
+    .exp-date { font-size: 13px; color: #64748b; white-space: nowrap; }
+
+    .exp-item ul {
+      margin: 10px 0 0 0;
+      padding-left: 20px;
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+
+    .exp-item ul li { margin-bottom: 8px; }
+
+    .tech-line { margin-top: 8px; font-size: 12px; color: #64748b; }
+    .tech-line span { color: #94a3b8; }
+
+    .project-item { margin-bottom: 26px; }
+    .project-item:last-child { margin-bottom: 0; }
+
+    .project-title {
+      font-size: 16px;
+      font-weight: bold;
+      color: #f1f5f9;
+      margin-bottom: 6px;
+    }
+
+    .project-item p { margin: 0 0 8px; font-size: 14px; color: #cbd5e1; }
+
+    .edu-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 14px;
+    }
+
+    .edu-item:last-child { margin-bottom: 0; }
+    .edu-degree { font-size: 15px; font-weight: bold; color: #f1f5f9; }
+    .edu-school { font-size: 14px; color: #94a3b8; margin-top: 2px; }
+    .edu-gpa { font-size: 13px; color: #38bdf8; white-space: nowrap; }
 
     footer {
       text-align: center;
-      padding: 20px;
-      color: #94a3b8;
+      padding: 30px 20px;
+      color: #475569;
+      font-size: 13px;
+    }
+
+    a { color: #38bdf8; }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 30px; }
+      .exp-header { flex-direction: column; }
+      .edu-item { flex-direction: column; }
     }
   </style>
 </head>
-
 <body>
 
 <header>
   <h1>Himaja Arabati</h1>
-  <p>MS in Computer Science | University of Central Missouri</p>
-  <p>Graduate Assistant | Center for Academic Support</p>
+  <p class="subtitle">MS Computer Science · University of Central Missouri</p>
+  <p class="subtitle">AI/ML · Cloud · Full-Stack · DevOps</p>
+  <div class="header-links">
+    <a href="mailto:arabatihimaja03@gmail.com">arabatihimaja03@gmail.com</a>
+    <a href="tel:6608645884">660-864-5884</a>
+    <a href="https://linkedin.com/in/himaja-arabati/" target="_blank">LinkedIn</a>
+    <a href="https://github.com/Himaja989" target="_blank">GitHub</a>
+  </div>
 </header>
 
 <section>
+
+  <!-- ABOUT -->
   <div class="card">
     <h2>About Me</h2>
     <p>
-     I am Himaja Arabati, a Computer Science graduate student at the University of Central Missouri, expected to graduate in May 2026. I have experience as a Graduate Assistant, where I supported faculty and students with academic and technical tasks. I am passionate about software engineering, cloud computing, and building scalable applications, and I enjoy solving real-world problems using technology.
+      Results-driven Computer Science graduate student with proven internship experience at IBM and Cisco,
+      specializing in AI/ML engineering, cloud-native full-stack development, and DevOps automation.
+      Demonstrated expertise in architecting LLM-powered applications with vector retrieval pipelines,
+      deploying ML models via Watson Studio, and orchestrating containerized microservices using Docker
+      and Kubernetes. Adept at building production-grade backend systems, RESTful APIs, and CI/CD
+      workflows — driven by a commitment to scalable, intelligent, and high-performance software engineering.
     </p>
   </div>
 
+  <!-- SKILLS -->
   <div class="card">
-    <h2>Skills</h2>
-    <div>
+    <h2>Technical Skills</h2>
+
+    <div class="tag-group">
+      <div class="tag-group-label">Languages</div>
       <span class="tag">Python</span>
+      <span class="tag">Java</span>
       <span class="tag">JavaScript</span>
-      <span class="tag">HTML</span>
-      <span class="tag">CSS</span>
-      <span class="tag">React</span>
-      <span class="tag">SQL</span>
+      <span class="tag">R</span>
+    </div>
+
+    <div class="tag-group">
+      <div class="tag-group-label">Frameworks</div>
+      <span class="tag">React.js</span>
+      <span class="tag">Next.js</span>
+      <span class="tag">Node.js</span>
+      <span class="tag">Express.js</span>
+      <span class="tag">FastAPI</span>
+    </div>
+
+    <div class="tag-group">
+      <div class="tag-group-label">Cloud &amp; DevOps</div>
+      <span class="tag">AWS</span>
+      <span class="tag">Azure</span>
       <span class="tag">Docker</span>
       <span class="tag">Kubernetes</span>
       <span class="tag">Jenkins</span>
-      <span class="tag">AWS</span>
-      <span class="tag">Machine Learning</span>
+      <span class="tag">GitHub Actions</span>
+      <span class="tag">CI/CD Pipelines</span>
+      <span class="tag">Bash Scripting</span>
+    </div>
+
+    <div class="tag-group">
+      <div class="tag-group-label">Databases</div>
+      <span class="tag">MySQL</span>
+      <span class="tag">PostgreSQL</span>
+      <span class="tag">MongoDB</span>
+      <span class="tag">DynamoDB</span>
+    </div>
+
+    <div class="tag-group">
+      <div class="tag-group-label">AI/ML &amp; Vector DBs</div>
+      <span class="tag">OpenAI API</span>
+      <span class="tag">Gemini API</span>
+      <span class="tag">IBM Watson Studio</span>
+      <span class="tag">IBM NLU</span>
+      <span class="tag">AutoAI</span>
+      <span class="tag">scikit-learn</span>
+      <span class="tag">TensorFlow</span>
+      <span class="tag">Pinecone</span>
+      <span class="tag">FAISS</span>
+      <span class="tag">Chroma</span>
+    </div>
+
+    <div class="tag-group">
+      <div class="tag-group-label">Tools &amp; Libraries</div>
+      <span class="tag">Git &amp; GitHub</span>
+      <span class="tag">Linux</span>
+      <span class="tag">Postman</span>
+      <span class="tag">Tailwind CSS</span>
+      <span class="tag">Chart.js</span>
+      <span class="tag">Recharts</span>
+      <span class="tag">WebSockets / SSE</span>
+      <span class="tag">JWT Auth</span>
+      <span class="tag">Pandas</span>
+      <span class="tag">NumPy</span>
+      <span class="tag">REST APIs</span>
+    </div>
+
+    <div class="tag-group">
+      <div class="tag-group-label">Concepts</div>
+      <span class="tag">Data Structures &amp; Algorithms</span>
+      <span class="tag">Microservices</span>
+      <span class="tag">Distributed Systems</span>
       <span class="tag">NLP</span>
-      <span class="tag">R</span>
-      <span class="tag">Git & GitHub</span>
+      <span class="tag">Machine Learning</span>
+      <span class="tag">System Design</span>
     </div>
   </div>
 
+  <!-- EXPERIENCE -->
   <div class="card">
-    <h2>Projects (In Progress / Planned)</h2>
+    <h2>Experience</h2>
 
-    <p><b>1. AI-Based Resume Analyzer</b><br>
-    A machine learning system that analyzes resumes and gives skill improvement suggestions using NLP techniques.</p>
+    <div class="exp-item">
+      <div class="exp-header">
+        <div>
+          <span class="exp-title">AI Intern — </span>
+          <span class="exp-company">IBM</span>
+          <span style="color:#64748b; font-size:14px;">, India</span>
+        </div>
+        <span class="exp-date">Aug 2023 – Dec 2023</span>
+      </div>
+      <ul>
+        <li>Spearheaded end-to-end ML model development (classification, regression, clustering) on IBM Cloud via Watson Studio, AutoAI, and Watson Machine Learning — automating training pipelines, hyperparameter optimization, and model deployment, materially reducing iteration cycles and improving prediction accuracy on production datasets.</li>
+        <li>Engineered NLP pipelines for text classification, multi-class sentiment analysis, and named entity recognition by integrating IBM Natural Language Understanding (NLU) API with scikit-learn and TensorFlow; processed multilingual real-world datasets and achieved measurable accuracy gains through rigorous feature engineering and cross-validation.</li>
+        <li>Executed comprehensive data preprocessing, statistical analysis, and model benchmarking with Pandas, NumPy, and Matplotlib; synthesized AI insights into Jupyter Notebook reports presented to cross-functional stakeholders, directly informing product decisions.</li>
+      </ul>
+      <div class="tech-line">Tech: <span>Python · IBM Watson Studio · IBM Cloud · Watson NLU · AutoAI · scikit-learn · TensorFlow · Pandas · NumPy · Jupyter</span></div>
+    </div>
 
-    <p><b>2. Cloud Expense Tracker (AWS)</b><br>
-    Full-stack application deployed on AWS to track personal expenses with authentication and dashboards.</p>
+    <div class="exp-item">
+      <div class="exp-header">
+        <div>
+          <span class="exp-title">DevOps Intern — </span>
+          <span class="exp-company">Cisco</span>
+          <span style="color:#64748b; font-size:14px;">, India</span>
+        </div>
+        <span class="exp-date">Jan 2024 – May 2024</span>
+      </div>
+      <ul>
+        <li>Architected and operationalized automated CI/CD pipelines using Jenkins and GitHub Actions — standardizing build, test, and deployment workflows across multiple internal microservices projects, significantly accelerating release velocity and eliminating manual deployment bottlenecks for cross-functional engineering teams.</li>
+        <li>Containerized applications with Docker and orchestrated Kubernetes deployments featuring rolling updates, auto-scaling, and liveness/readiness probes — ensuring zero-downtime releases, fault tolerance, and consistent environment parity across development, staging, and production infrastructure.</li>
+        <li>Automated network infrastructure provisioning and device configuration management via Python scripts interfacing with Cisco DevNet APIs — eliminating manual overhead and improving distributed network reliability.</li>
+      </ul>
+      <div class="tech-line">Tech: <span>Docker · Kubernetes · Jenkins · GitHub Actions · Python · Cisco DevNet APIs · Linux · Git · Bash · YAML</span></div>
+    </div>
 
-    <p><b>3. Task Management System</b><br>
-    React + Node.js application for creating, updating, and tracking tasks with user login system.</p>
-
-    <p><b>4. Data Visualization Dashboard</b><br>
-    Interactive dashboard using Python (Pandas + Plotly) for analyzing datasets and generating insights.</p>
-
-    <p><b>5. Kubernetes Microservices Demo</b><br>
-    Containerized microservices deployed using Docker and Kubernetes to simulate scalable architecture.</p>
+    <div class="exp-item">
+      <div class="exp-header">
+        <div>
+          <span class="exp-title">Graduate Research &amp; Teaching Assistant — </span>
+          <span class="exp-company">University of Central Missouri</span>
+        </div>
+        <span class="exp-date">Aug 2025 – May 2026</span>
+      </div>
+      <ul>
+        <li>Actively contributed to faculty-led CS research projects — assisting with experimental design, literature review, data collection, and technical implementation, translating academic objectives into functional prototypes and documented research deliverables.</li>
+        <li>Delivered structured lab instruction and tutoring for Data Structures, Algorithms, and Software Engineering courses, fostering measurable improvements in student comprehension and assignment performance.</li>
+        <li>Coordinated course material development, student progress tracking, and academic scheduling logistics — streamlining departmental workflows and enabling faculty to allocate greater bandwidth to research and curriculum innovation.</li>
+      </ul>
+    </div>
   </div>
 
+  <!-- PROJECTS -->
+  <div class="card">
+    <h2>Projects</h2>
+
+    <div class="project-item">
+      <div class="project-title">AI Research Assistant</div>
+      <p>Architected a production-grade AI research assistant enabling contextual document Q&amp;A with citations, intelligent follow-up generation, and real-time streaming — orchestrating LLM workflows via OpenAI/Gemini APIs with semantic vector retrieval on Pinecone, FAISS, and Chroma for high-relevance, citation-backed responses over large document corpora.</p>
+      <p>Built a robust FastAPI backend with WebSocket/SSE streaming, document ingestion pipelines, contextual embedding generation, and semantic search across PostgreSQL/MongoDB — delivering scalable sub-second query resolution with persistent searchable conversation history.</p>
+      <div class="tech-line">Tech: <span>Python · FastAPI · React.js/Next.js · Node.js/Express.js · OpenAI/Gemini · WebSockets · PostgreSQL · MongoDB · Pinecone/FAISS/Chroma · Docker</span></div>
+    </div>
+
+    <div class="project-item">
+      <div class="project-title">Smart Job Tracker</div>
+      <p>Developed a full-stack job lifecycle management platform with JWT-secured role-based authentication, multi-stage interview pipeline visualization, smart reminders, and real-time analytics dashboards — consolidating the entire job search workflow into a unified, highly responsive system.</p>
+      <p>Architected optimized RESTful APIs with advanced multi-criteria search/filter logic, MongoDB/PostgreSQL query tuning, and responsive Tailwind CSS interfaces supporting high-concurrency multi-user access.</p>
+      <div class="tech-line">Tech: <span>React.js · Node.js · Express.js · MongoDB/PostgreSQL · JWT Auth · Tailwind CSS · Docker · REST APIs · Postman</span></div>
+    </div>
+
+    <div class="project-item">
+      <div class="project-title">Healthcare Operations Dashboard</div>
+      <p>Designed a real-time healthcare analytics platform visualizing patient flow, appointment trends, wait times, and resource utilization through interactive Chart.js/Recharts dashboards with granular filtering, exportable reporting, and role-based access control for clinical administrators.</p>
+      <p>Implemented end-to-end CI/CD automation via Jenkins/GitHub Actions with containerized Docker deployments on AWS/Azure — enabling one-click releases, enforcing environment consistency, and reducing infrastructure management overhead.</p>
+      <div class="tech-line">Tech: <span>React.js · Python · FastAPI · Node.js/Express.js · PostgreSQL/MongoDB · Chart.js/Recharts · Docker · AWS/Azure · REST APIs</span></div>
+    </div>
+  </div>
+
+  <!-- EDUCATION -->
+  <div class="card">
+    <h2>Education</h2>
+
+    <div class="edu-item">
+      <div>
+        <div class="edu-degree">Master of Science in Computer Science</div>
+        <div class="edu-school">University of Central Missouri</div>
+      </div>
+      <div class="edu-gpa">GPA: 3.5 / 4.0</div>
+    </div>
+
+    <div class="edu-item">
+      <div>
+        <div class="edu-degree">Bachelor of Technology in Computer Science &amp; Engineering</div>
+        <div class="edu-school">Chaitanya Institute of Technology and Science</div>
+      </div>
+      <div class="edu-gpa">GPA: 8.3 / 10.0</div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
   <div class="card">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:arabatihimaja03@gmail.com">arabatihimaja03@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/Himaja989">github.com/Himaja989</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/himaja-arabati/">linkedin.com/in/himaja-arabati</a></p>
+    <p>Phone: <a href="tel:6608645884">660-864-5884</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/himaja-arabati/" target="_blank">linkedin.com/in/himaja-arabati</a></p>
+    <p>GitHub: <a href="https://github.com/Himaja989" target="_blank">github.com/Himaja989</a></p>
   </div>
+
 </section>
 
 <footer>
